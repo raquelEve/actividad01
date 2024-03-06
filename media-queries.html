@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            background: pink;
+        }
+        .flex-container div{
+            height: 50px;
+            flex-basis: 100px;
+            background: silver;
+            margin: 5px;
+            color:white;
+            text-align: center;
+            line-height: 40px;
+        }
+        @media (max-width:600px){
+            .flex-container{
+                flex-direction: column;                
+                background: #e37b8c;
+            }
+            .flex-container div{
+                flex-basis: 100%;                          
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>Home</div>
+        <div>Productos</div>
+        <div>Elementos</div>
+    </div>
+</body>
+</html>

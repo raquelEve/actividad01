@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cuadrado{
+            width: 200px;
+            height: 200px;
+            background: #aaa;
+            animation-name: mianimacion;
+            animation-duration: 4s;
+            position: relative; /*relativa a la ventana de windows*/
+            animation-direction: reverse;
+            /*otros valores: normal, alternate (cuando acaba vuelve), alternate-reverse*/
+            /*se pueden combinar: animation-direction: normal, reverse;*/
+            animation-timing-function: ease;
+            /*https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function*/
+            animation-iteration-count: infinite;
+            /*infinite, valor numerico, revert, revert-layer*/
+    
+        }
+        @keyframes mianimacion {
+            0% { background: #aaa; left:0px; top:0px }
+            25% { background: red; left:300px; top:0px }
+            50% { background: green; left:300px; top:300px }
+            75% { background: pink; left:0px; top:300px }
+            100% { background: blue; left:0px; top:0px }
+        }
+    </style>
+</head>
+<body>
+   <div id="cuadrado"></div> 
+</body>
+</html>
