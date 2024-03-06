@@ -1,0 +1,133 @@
+*{
+    padding:10px;
+    margin:10px
+}
+body{
+    background: #f1f4f5;
+}
+main{
+   max-width:1200px;
+   background:#fff;
+   margin: 0 auto;
+}
+header, footer, .container{
+    background: black;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+header nav{
+    background-color: #2d4059;
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;   
+}
+header nav div.red{
+ flex-basis:25%;
+ background: #ea5455;
+}
+header nav div:first-child{
+    position: relative;
+    padding: 0px;
+    transition: all 1s;/* la transisión va en el padre*/
+}
+
+header nav div:nth-child(2){
+    flex-basis:50%;  
+}
+
+header nav .logo{
+    background-color: #ea5455;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+header nav .logo:hover{
+     background-color: #da007f;
+     position: absolute;
+     transform: scale(1.5);
+ }
+
+header section{
+    background: #f07b3f;
+}
+header section div{
+    background: #fed460;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.container section{
+    background-color:#4e4e6a ;
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container section article{
+    background-color:#1f6cb0 ;
+    flex-basis: calc( 50% - 40px);
+}
+.container section article:last-child{
+    background-color:#70a3c4 ;
+    flex-basis: 100%;
+}
+.container aside{
+    background-color:#f73f52 ;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.container aside div{
+    background-color:#feea85 ;
+}
+footer div{
+    background-color:#e6af2e ;
+}
+
+/***************** MEDIA Q **********************************/
+
+
+ /* Medium devices, applies to small devices (landscape phones, less than 768px)*/
+ @media (max-width: 767.98px) { 
+    body{
+        background: #d3d3d3;
+    }
+    .container{
+        background:#feff03 ;
+        flex-direction: column;
+    }
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    body{
+        background: #a5a6a7;    
+    }
+    header nav{
+        flex-direction: column;
+    }
+    header nav div,
+    header nav div:nth-child(2){
+        flex-grow:1;
+    }
+    .container section {
+        flex-direction: column; /*tambien tiene desbordamiento*/
+    }
+    .container section article{
+        background-color:#1f6cb0 ;
+        flex-basis: 100%;
+    }
+    header nav div:first-child{       
+       /* transition: none;*//* la transisión va en el padre*/
+        padding: 5px 0px;
+    }
+    header nav .red:last-child{            
+        padding: 19px;
+    }
+    header nav .logo:hover{
+        background-color: #ea5455;
+        position: relative;
+        transform: none;
+    }
+}
